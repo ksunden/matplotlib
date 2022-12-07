@@ -1,6 +1,7 @@
 import itertools
 import pickle
 
+from typing import Any
 from weakref import ref
 from unittest.mock import patch, Mock
 
@@ -441,12 +442,12 @@ def test_sanitize_sequence():
     assert k == cbook.sanitize_sequence(k)
 
 
-fail_mapping = (
+fail_mapping: tuple[tuple[dict, dict], ...] = (
     ({'a': 1, 'b': 2}, {'alias_mapping': {'a': ['b']}}),
     ({'a': 1, 'b': 2}, {'alias_mapping': {'a': ['a', 'b']}}),
 )
 
-pass_mapping = (
+pass_mapping: tuple[tuple[Any, dict, dict], ...] = (
     (None, {}, {}),
     ({'a': 1, 'b': 2}, {'a': 1, 'b': 2}, {}),
     ({'b': 2}, {'a': 2}, {'alias_mapping': {'a': ['a', 'b']}}),
