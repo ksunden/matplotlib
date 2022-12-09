@@ -1,5 +1,4 @@
 import matplotlib.artist as martist
-from _typeshed import Incomplete
 from matplotlib import cbook
 from matplotlib.axes import Axes
 from matplotlib.backend_bases import RendererBase
