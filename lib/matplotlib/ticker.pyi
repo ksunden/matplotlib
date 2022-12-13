@@ -41,7 +41,8 @@ class FixedFormatter(Formatter):
 class FuncFormatter(Formatter):
     func: Callable[[float, int|None], str]
     offset_string: str
-    def __init__(self, func: Callable[[float, int|None], str]) -> None: ...
+    # Callable[[float, int | None], str] | Callable[[float], str]
+    def __init__(self, func: Callable[..., str]) -> None: ...
     def set_offset_string(self, ofs: str) -> None: ...
 
 class FormatStrFormatter(Formatter):
