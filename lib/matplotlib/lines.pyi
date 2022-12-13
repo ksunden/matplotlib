@@ -4,22 +4,15 @@ from .artist import Artist, allow_rasterization
 from .axes import Axes
 from .backend_bases import MouseEvent, FigureCanvasBase
 from .cbook import STEP_LOOKUP_MAP, ls_mapper, ls_mapper_r
-from .markers import CARETDOWN, CARETDOWNBASE, CARETLEFT, CARETLEFTBASE, CARETRIGHT, CARETRIGHTBASE, CARETUP, CARETUPBASE, MarkerStyle, TICKDOWN, TICKLEFT, TICKRIGHT, TICKUP, MarkerStyle
+from .markers import CARETDOWN, CARETDOWNBASE, CARETLEFT, CARETLEFTBASE, CARETRIGHT, CARETRIGHTBASE, CARETUP, CARETUPBASE, TICKDOWN, TICKLEFT, TICKRIGHT, TICKUP, MarkerStyle
 from .path import Path
 from .transforms import Bbox, BboxTransformTo, TransformedPath, Transform
+from ._typing import Color, LineStyleType, FillStyleType, DrawStyleType, MarkerType, MarkEveryType
 
 from typing import Any, Literal, Sequence, TypeAlias, Union, Callable, overload
 from numpy.typing import ArrayLike
 
 def segment_hits(cx: ArrayLike, cy: ArrayLike, x: ArrayLike, y: ArrayLike, radius: ArrayLike) -> ArrayLike: ...
-
-LineStyleType: TypeAlias = Union[str, tuple[float, Sequence[float]]]
-FillStyleType: TypeAlias = Literal["full", "left", "right", "bottom", "top", "none"]
-DrawStyleType: TypeAlias = Literal["default", "steps", "steps-pre", "steps-mid", "steps-post"]
-MarkerType: TypeAlias = Union[str, Path, MarkerStyle]
-MarkEveryType: TypeAlias = Union[None, int, tuple[int, int], slice, list[int], float, tuple[float, float], list[bool]]
-#TODO color
-Color: TypeAlias = Any
 
 class Line2D(Artist):
     lineStyles: dict[str, str]
