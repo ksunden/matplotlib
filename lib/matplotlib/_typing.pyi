@@ -1,7 +1,7 @@
 from matplotlib.path import Path
 from matplotlib.markers import MarkerStyle
 
-from typing import Union, TypeAlias, Literal
+from typing import Any, Union, TypeAlias, Literal, Sequence
 
 LineStyleType: TypeAlias = Union[str, tuple[float, Sequence[float]]]
 FillStyleType: TypeAlias = Literal["full", "left", "right", "bottom", "top", "none"]
