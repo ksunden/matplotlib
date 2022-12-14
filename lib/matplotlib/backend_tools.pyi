@@ -1,9 +1,9 @@
 import enum
 from matplotlib import cbook
 from matplotlib.axes import Axes
-from matplotlib.backend_bases import ToolContainerBase
+from matplotlib.backend_bases import ToolContainerBase, FigureCanvasBase
 from matplotlib.backend_managers import ToolManager, ToolEvent
-from matplotlib.figure import Figure, FigureCanvasBase
+from matplotlib.figure import Figure
 from matplotlib.scale import ScaleBase
 from matplotlib._pylab_helpers import Gcf
 

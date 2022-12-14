@@ -1,5 +1,6 @@
 from matplotlib import backend_tools, cbook, widgets
-from matplotlib.figure import Figure, FigureCanvasBase
+from matplotlib.backend_bases import FigureCanvasBase
+from matplotlib.figure import Figure
 
 from typing import Any, Callable, Iterable, TypeVar, Type
 

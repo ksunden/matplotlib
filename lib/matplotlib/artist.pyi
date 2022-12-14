@@ -3,7 +3,7 @@ from .axes import Axes
 from .backend_bases import RendererBase, MouseEvent
 from .cm import ScalarMappable
 from .colors import BoundaryNorm
-from .figure import Figure
+from .figure import Figure, FigureBase
 from .path import Path
 from .patches import Patch
 from .patheffects import AbstractPathEffect
@@ -26,7 +26,7 @@ class Artist:
     zorder: float
     def __init_subclass__(cls): ...
     stale_callback: Callable[[Artist, bool], None] | None
-    figure: Figure | None
+    figure: FigureBase | None
     clipbox: Bbox | None
     def __init__(self) -> None: ...
     def remove(self) -> None: ...

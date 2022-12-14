@@ -144,7 +144,7 @@ class MouseEvent(LocationEvent):
     key: str | None
     step: float
     dblclick: bool
-    def __init__(self, name: str, canvas: FigureCanvasBase, x: float, y: float, button: MouseButton | Literal["up", "down"] | None = ..., key: str | None = ..., step: float = ..., dblclick: bool = ..., guiEvent: Any | None = ...) -> None: ...
+    def __init__(self, name: str, canvas: FigureCanvasBase, x: int, y: int, button: MouseButton | Literal["up", "down"] | None = ..., key: str | None = ..., step: float = ..., dblclick: bool = ..., guiEvent: Any | None = ...) -> None: ...
 
 class PickEvent(Event):
     mouseevent: MouseEvent
@@ -153,7 +153,7 @@ class PickEvent(Event):
 
 class KeyEvent(LocationEvent):
     key: str | None
-    def __init__(self, name: str, canvas: FigureCanvasBase, key: str | None, x: float = ..., y: float = ..., guiEvent: Any | None = ...) -> None: ...
+    def __init__(self, name: str, canvas: FigureCanvasBase, key: str | None, x: int = ..., y: int = ..., guiEvent: Any | None = ...) -> None: ...
 
 class FigureCanvasBase:
     required_interactive_framework: str | None

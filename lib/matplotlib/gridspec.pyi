@@ -1,4 +1,3 @@
-from _typeshed import Incomplete
 from typing import Any, Literal, overload
 
 from numpy.typing import ArrayLike
