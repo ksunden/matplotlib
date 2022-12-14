@@ -1,5 +1,5 @@
 from matplotlib.axes import Axes
-from matplotlib.collecitons import PolyCollection
+from matplotlib.collections import PolyCollection
 from matplotlib._typing import Color
 
 from typing import Iterable, Literal
