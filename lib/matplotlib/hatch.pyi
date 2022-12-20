@@ -1,4 +1,3 @@
-from _typeshed import Incomplete
 from matplotlib.path import Path
 
 import numpy as np
