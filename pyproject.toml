@@ -6,3 +6,6 @@ requires = [
     "pybind11>=2.6",
     "setuptools_scm>=7",
 ]
+
+[tool.mypy]
+exclude = ["lib/matplotlib/(sphinxext|pyplot|backends|testing)"]
