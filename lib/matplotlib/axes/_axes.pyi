@@ -1,21 +1,20 @@
 from matplotlib.axes._base import _AxesBase
 from matplotlib.axes._secondary_axes import SecondaryAxis
 
-from matplotlib.annotation import Annotation
 from matplotlib.artist import Artist
 from matplotlib.backend_bases import RendererBase
-from matplotlib.collection import Collection, LineCollection, BrokenBarHCollection, PathCollection, PolyCollection, EventCollection, QuadMesh
+from matplotlib.collections import Collection, LineCollection, BrokenBarHCollection, PathCollection, PolyCollection, EventCollection, QuadMesh
 from matplotlib.colors import Colormap, Normalize
 from matplotlib.container import BarContainer, ErrorbarContainer, StemContainer
 from matplotlib.contour import ContourSet, QuadContourSet
 from matplotlib.image import AxesImage, PcolorImage
 from matplotlib.legend import Legend
-from matplotlib.legend_handlers import HandlerBase
+from matplotlib.legend_handler import HandlerBase
 from matplotlib.lines import Line2D
 from matplotlib.mlab import GaussianKDE
 from matplotlib.patches import Rectangle, FancyArrow, Polygon, StepPatch
 from matplotlib.quiver import Quiver, QuiverKey, Barbs
-from matplotlib.text import Text
+from matplotlib.text import Annotation, Text
 from matplotlib.transforms import Transform, Bbox
 import matplotlib.tri as mtri
 import matplotlib.table as mtable

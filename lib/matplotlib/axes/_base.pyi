@@ -7,7 +7,7 @@ from matplotlib.artist import Artist
 from matplotlib.axis import XAxis, YAxis
 from matplotlib.backend_bases import RendererBase, MouseButton, MouseEvent
 from matplotlib.cbook import index_of
-from matplotlib.containers import Container
+from matplotlib.container import Container
 from matplotlib.collections import Collection
 from matplotlib.legend import Legend
 from matplotlib.lines import Line2D

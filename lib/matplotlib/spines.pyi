@@ -3,7 +3,7 @@ from collections.abc import MutableMapping, Iterator
 from matplotlib.artist import allow_rasterization
 from matplotlib.axes import Axes
 from matplotlib.axis import Axis
-from matplotlib.paths import Path
+from matplotlib.path import Path
 from matplotlib.transforms import Transform
 from matplotlib._typing import Color
 
