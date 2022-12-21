@@ -8,4 +8,4 @@ requires = [
 ]
 
 [tool.mypy]
-exclude = ["lib/matplotlib/(sphinxext|pyplot|backends|testing)"]
+exclude = ["lib/matplotlib/(sphinxext|pyplot|backends|testing)", "lib/mpl_toolkits"]

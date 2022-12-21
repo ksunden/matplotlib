@@ -1,6 +1,6 @@
 import matplotlib.artist as martist
 
-from _typing import Incomplete
+from _typing import Incomplete  # type: ignore
 from collections.abc import MutableSequence
 from matplotlib import cbook, offsetbox
 from matplotlib.artist import Artist
