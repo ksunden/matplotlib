@@ -1,13 +1,12 @@
 from matplotlib.path import Path
 from matplotlib.markers import MarkerStyle
 
-from typing import Any, Union, TypeAlias, Literal, Sequence
+from typing import Any, Union, Literal, Sequence
 
-LineStyleType: TypeAlias = Union[str, tuple[float, Sequence[float]]]
-FillStyleType: TypeAlias = Literal["full", "left", "right", "bottom", "top", "none"]
-DrawStyleType: TypeAlias = Literal["default", "steps", "steps-pre", "steps-mid", "steps-post"]
-MarkerType: TypeAlias = Union[str, Path, MarkerStyle]
-MarkEveryType: TypeAlias = Union[None, int, tuple[int, int], slice, list[int], float, tuple[float, float], list[bool]]
+LineStyleType = Union[str, tuple[float, Sequence[float]]]
+FillStyleType = Literal["full", "left", "right", "bottom", "top", "none"]
+DrawStyleType = Literal["default", "steps", "steps-pre", "steps-mid", "steps-post"]
+MarkerType = Union[str, Path, MarkerStyle]
+MarkEveryType = Union[None, int, tuple[int, int], slice, list[int], float, tuple[float, float], list[bool]]
 #TODO color
-Color: TypeAlias = Any
-
+Color = Any

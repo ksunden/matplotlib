@@ -17,7 +17,7 @@ from matplotlib.text import Text
 from matplotlib.transforms import Affine2D, Transform, TransformedPath, Bbox
 from matplotlib._typing import Color, LineStyleType, FillStyleType, DrawStyleType, MarkerType, MarkEveryType
 
-from typing import Any, Callable, Literal, NamedTuple, Sequence, Type, TypeAlias, TypeVar
+from typing import Any, Callable, Literal, NamedTuple, Sequence, Type, TypeVar
 from numpy.typing import ArrayLike
 
 
@@ -140,7 +140,7 @@ class MouseButton(IntEnum):
     FORWARD: int
 
 class MouseEvent(LocationEvent):
-    button: MouseButton | Literal["up", "down"] | None 
+    button: MouseButton | Literal["up", "down"] | None
     key: str | None
     step: float
     dblclick: bool

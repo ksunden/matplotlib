@@ -9,7 +9,7 @@ from .path import Path
 from .transforms import Bbox, BboxTransformTo, TransformedPath, Transform
 from ._typing import Color, LineStyleType, FillStyleType, DrawStyleType, MarkerType, MarkEveryType
 
-from typing import Any, Literal, Sequence, TypeAlias, Union, Callable, overload
+from typing import Any, Literal, Sequence, Union, Callable, overload
 from numpy.typing import ArrayLike
 
 def segment_hits(cx: ArrayLike, cy: ArrayLike, x: ArrayLike, y: ArrayLike, radius: ArrayLike) -> ArrayLike: ...
