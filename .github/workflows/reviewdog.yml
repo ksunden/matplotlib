@@ -66,8 +66,9 @@ jobs:
         run: |
           set -o pipefail
           mypy --config pyproject.toml lib/matplotlib \
-          --exclude "lib/matplotlib/(sphinxext|pyplot|backends|testing)" \
-          --exclude "lib/mpl_toolkits" | \
+             --ignore-missing-imports \
+             --exclude "lib/matplotlib/(sphinxext|pyplot|backends|testing)" \
+             --exclude "lib/mpl_toolkits" | \
             reviewdog -f=mypy -name=mypy \
               -tee -reporter=github-check -filter-mode nofilter
 
