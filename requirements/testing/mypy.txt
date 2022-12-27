@@ -5,4 +5,4 @@ mypy
 # Extra stubs distributed separately from the main pypi package
 pandas-stubs
 types-pillow
-numpy
+types-python-dateutil
