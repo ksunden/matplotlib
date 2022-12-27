@@ -64,10 +64,10 @@ jobs:
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          pwd
-          ls
           set -o pipefail
-          mypy --config pyproject.toml lib/matplotlib | \
+          mypy --config pyproject.toml lib/matplotlib \
+          --exclude "lib/matplotlib/(sphinxext|pyplot|backends|testing)" \
+          --exclude "lib/mpl_toolkits" | \
             reviewdog -f=mypy -name=mypy \
               -tee -reporter=github-check -filter-mode nofilter
 
