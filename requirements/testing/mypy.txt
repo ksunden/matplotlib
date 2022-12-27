@@ -6,6 +6,13 @@ mypy
 pandas-stubs
 types-pillow
 types-python-dateutil
+types-psutil
+
+sphinx
+
+# Default requirements, included here because mpl itself does not
+# need to be installed for mypy to run, but deps are needed
+# and pip has no --deps-only install command
 contourpy>=1.0.1
 cycler>=0.10
 fonttools>=4.22.0
