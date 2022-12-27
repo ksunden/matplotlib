@@ -66,7 +66,7 @@ jobs:
         run: |
           set -o pipefail
           mypy --config pyproject.toml lib/matplotlib | \
-            reviewdog -f=pep8 -name=mypy \
+            reviewdog -f=mypy -name=mypy \
               -tee -reporter=github-check -filter-mode nofilter
 
 
