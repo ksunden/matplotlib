@@ -3457,6 +3457,7 @@ def pie(
     rotatelabels: bool = False,
     *,
     normalize: bool = True,
+    hatch: str | Sequence[str] | None = None,
     data=None,
 ):
     return gca().pie(
@@ -3477,6 +3478,7 @@ def pie(
         frame=frame,
         rotatelabels=rotatelabels,
         normalize=normalize,
+        hatch=hatch,
         **({"data": data} if data is not None else {}),
     )
 
