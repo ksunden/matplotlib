@@ -1201,7 +1201,7 @@ def cla() -> None:
 ## More ways of creating axes ##
 
 @_docstring.dedent_interpd
-def subplot(*args, **kwargs) -> Axes:
+def subplot(*args, **kwargs) -> matplotlib.axes.Axes:
     """
     Add an Axes to the current figure or retrieve an existing Axes.
 
@@ -1411,7 +1411,7 @@ def subplots(
     subplot_kw: dict[str, Any] | None = None,
     gridspec_kw: dict[str, Any] | None = None,
     **fig_kw
-) -> tuple[Figure, Axes | np.ndarray | SubplotBase]:
+) -> tuple[Figure, matplotlib.axes.Axes | np.ndarray | SubplotBase]:
     """
     Create a figure and a set of subplots.
 
@@ -1575,7 +1575,7 @@ def subplot_mosaic(
     gridspec_kw: dict[str, Any] | None = None,
     per_subplot_kw: dict[Any, dict[str, Any]] | None = None,
     **fig_kw
-) -> tuple[Figure, dict[Any, Axes]]:
+) -> tuple[Figure, dict[Any, matplotlib.axes.Axes]]:
     """
     Build a layout of Axes based on ASCII art or nested lists.
 
@@ -1754,7 +1754,7 @@ def subplot2grid(
     return ax
 
 
-def twinx(ax: Axes | None = None) -> _AxesBase:
+def twinx(ax: matplotlib.axes.Axes | None = None) -> _AxesBase:
     """
     Make and return a second axes that shares the *x*-axis.  The new axes will
     overlay *ax* (or the current axes if *ax* is *None*), and its ticks will be
@@ -1770,7 +1770,7 @@ def twinx(ax: Axes | None = None) -> _AxesBase:
     return ax1
 
 
-def twiny(ax: Axes | None = None) -> _AxesBase:
+def twiny(ax: matplotlib.axes.Axes | None = None) -> _AxesBase:
     """
     Make and return a second axes that shares the *y*-axis.  The new axes will
     overlay *ax* (or the current axes if *ax* is *None*), and its ticks will be
@@ -2225,8 +2225,8 @@ def _get_pyplot_commands() -> list[str]:
 @_copy_docstring_and_deprecators(Figure.colorbar)
 def colorbar(
     mappable: ScalarMappable | None = None,
-    cax: Axes | None = None,
-    ax: Axes | Iterable[Axes] | None = None,
+    cax: matplotlib.axes.Axes | None = None,
+    ax: matplotlib.axes.Axes | Iterable[matplotlib.axes.Axes] | None = None,
     **kwargs
 ) -> Colorbar:
     if mappable is None:
