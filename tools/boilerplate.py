@@ -15,6 +15,7 @@ this file.
 
 import ast
 from enum import Enum
+import functools
 import inspect
 from inspect import Parameter
 from pathlib import Path
@@ -398,9 +399,10 @@ def get_ast_tree(cls):
     for item in tree.body:
         if isinstance(item, ast.ClassDef) and item.name == cls.__name__:
             return item
-    raise ValueError("Cannot find {cls.__name__} in ast")
+    raise ValueError(f"Cannot find {cls.__name__} in ast")
 
 
+@functools.lru_cache
 def get_ast_mro_trees(cls):
     return [get_ast_tree(c) for c in cls.__mro__ if c.__module__ != "builtins"]
 
@@ -432,11 +434,11 @@ def update_sig_from_node(node, sig):
     params = dict(sig.parameters)
     args = node.args
     allargs = (
-        args.posonlyargs
-        + args.args
-        + [args.vararg]
-        + args.kwonlyargs
-        + [args.kwarg]
+        *args.posonlyargs,
+        *args.args,
+        args.vararg,
+        *args.kwonlyargs,
+        args.kwarg,
     )
     for param in allargs:
         if param is None:
